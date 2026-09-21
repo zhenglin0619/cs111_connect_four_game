@@ -1,6 +1,6 @@
 # Connect Four Game
 
-A terminal-based Connect Four game written in Python for Computer Science 111. Play against another person, a random computer player, or a computer player that scores moves with a configurable lookahead.
+A terminal-based Connect Four game written in Python for Computer Science 111 at Boston University. Play against another person, a random computer player, or a computer player that scores moves with a configurable lookahead.
 
 ## Requirements
 
@@ -46,19 +46,6 @@ For a human player, type a column number when prompted. Pick a column that still
 | `AIPlayer('O', 'LEFT', 2)` | Scores columns using the given lookahead depth and breaks tied scores according to the selected rule. |
 
 `AIPlayer` accepts `LEFT`, `RIGHT`, or `RANDOM` as its tiebreak rule and a nonnegative integer as its lookahead depth. Larger depths take longer to calculate.
-
-## Code structure
-
-- `Board` stores the grid, adds and removes checkers, and checks for wins.
-- `Player` handles human input and tracks moves.
-- `RandomPlayer` and `AIPlayer` choose computer moves.
-- `connect_four(p1, p2)` runs a game and returns the final board.
-
-## Current limitations
-
-- Human input must be a number. Other text raises a `ValueError`.
-- Human input checks the column number but does not reject a full column, so selecting one uses a turn without placing a checker.
-- The AI is a simple course-project implementation; it may miss winning or blocking moves.
 
 ## License
 
